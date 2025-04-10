@@ -1,0 +1,28 @@
+### List All Applications (GET)
+GET http://localhost:3000/api/jobs/
+
+### List of Applications based on status
+GET http://localhost:3000/api/jobs/status?status=Interview
+
+### Delete Job Application by ID
+DELETE http://localhost:3000/api/jobs/67f76c02017cb0db10ab41ba
+
+### Add Multiple Job Applications in the Same Route
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+    "company": "Salesforce",
+    "role": "Business Analyst",
+    "status": "Offer",
+    "dateOfApplication": "2025-03-30",
+    "link": "https://www.salesforce.com/careers/jobs/212223"
+}
+
+### Update Job Application by ID
+PUT http://localhost:3000/api/jobs/67f76d6e017cb0db10ab41bb
+Content-Type: application/json
+
+{
+    "status": "Interview"
+}
